@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Боевая система</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RPG Боевая система</h1>
+        </header>
+        
+        <div class="race-selection" id="raceSelection">
+            <button class="race-btn elf" data-race="elf">Эльф</button>
+            <button class="race-btn human" data-race="human">Человек</button>
+            <button class="race-btn skyzer" data-race="skyzer">Скайзерновец</button>
+        </div>
+        
+        <div class="game-section">
+            <div class="panel">
+                <h2>Ваш персонаж</h2>
+                <div class="character-info">
+                    <div class="stats">
+                        <div class="stat">
+                            <div>Уровень: <span id="charLevel">1</span></div>
+                        </div>
+                        <div class="stat">
+                            <div>Опыт: <span id="charExp">0</span>/<span id="charExpNeeded">20</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill exp-fill" id="charExpBar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div>Здоровье: <span id="charHp">100</span>/<span id="charMaxHp">100</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill hp-fill" id="charHpBar" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div>Мана: <span id="charMp">50</span>/<span id="charMaxMp">50</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill mp-fill" id="charMpBar" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div>Урон: <span id="charDmg">10</span></div>
+                        </div>
+                        <div class="stat">
+                            <div>Раса: <span id="charRace">Не выбрана</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <h2>Враг</h2>
+                <div class="monster-image" id="monsterImage">?</div>
+                <div class="monster-info">
+                    <div class="stats">
+                        <div class="stat">
+                            <div>Тип: <span id="monsterType">Не найден</span></div>
+                        </div>
+                        <div class="stat">
+                            <div>Здоровье: <span id="monsterHp">0</span>/<span id="monsterMaxHp">0</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill hp-fill" id="monsterHpBar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div>Мана: <span id="monsterMp">0</span>/<span id="monsterMaxMp">0</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill mp-fill" id="monsterMpBar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div>Урон: <span id="monsterDmg">0</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <button id="findEnemyBtn" class="find-enemy-btn" disabled>Найти врага</button>
+            <button id="attackBtn" class="attack-btn" disabled>Атаковать</button>
+        </div>
+        
+        <div class="battle-log" id="battleLog">
+            <div class="log-entry system-log">Выберите расу для начала игры</div>
+        </div>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
